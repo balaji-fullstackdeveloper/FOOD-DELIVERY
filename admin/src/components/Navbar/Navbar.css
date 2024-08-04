@@ -1,0 +1,30 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 4%;
+}
+.navbar .logo {
+  width: max(10%, 80px);
+}
+.rightside {
+  display: flex;
+  gap: 10px;
+}
+.navbar .profile {
+  width: 40px;
+}
+.logoutbutton {
+  width: max(10vw, 70px);
+  background-color: #ffffff;
+  color: #080710;
+  padding: 6px 0;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: tomato;
+}
+.logoutbutton:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}

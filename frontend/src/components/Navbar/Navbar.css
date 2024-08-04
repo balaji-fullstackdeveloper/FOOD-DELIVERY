@@ -1,0 +1,180 @@
+@import url("https://unpkg.com/css.gg@2.0.0/icons/css/menu-round.css");
+.navbar {
+  padding: 20px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .logo {
+  width: 150px;
+}
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  color: #49557e;
+  font-size: 18px;
+}
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.navbar button {
+  background: transparent;
+  font-size: 16px;
+  color: #49557e;
+  border: 1px solid tomato;
+  padding: 10px 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.navbar button:hover {
+  background-color: #fff4f2;
+}
+.navbar .active {
+  padding-bottom: 2px;
+  border-bottom: 2px solid #49557e;
+}
+.navbar li {
+  cursor: pointer;
+}
+.navbar-search-icon {
+  position: relative;
+}
+.navbar-search-icon .dot {
+  position: absolute;
+  min-width: 10px;
+  min-height: 10px;
+  background-color: tomato;
+  border-radius: 5px;
+  top: -8px;
+  right: -8px;
+}
+.gg-menu-round {
+  box-sizing: border-box;
+  position: relative;
+  display: none;
+  transform: scale(var(--ggs, 1));
+  width: 30px;
+  height: 30px;
+  border-radius: 24px;
+  border: 2px solid tomato;
+}
+.gg-menu-round::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  color: tomato;
+  background: tomato;
+  border-radius: 3px;
+  top: 7px;
+  left: 3px;
+  box-shadow: 0 4px 0, 0 8px 0;
+}
+.sidebar-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar-menu link,
+a {
+  padding: 10px 0px;
+}
+.border {
+  /* border: 1px solid rgb(170, 158, 156); */
+  text-align: center;
+  width: 80%;
+  margin-bottom: 1px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: larger;
+  border: 1px solid tomato;
+}
+.border:hover {
+  background-color: tomato;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.empty {
+  height: 10%;
+}
+.navbar-profile {
+  position: relative;
+}
+.nav-profile-dropdown {
+  position: absolute;
+  display: none;
+  right: 0;
+  z-index: 1;
+}
+.navbar-profile:hover .nav-profile-dropdown {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #fff2ef;
+  padding: 12px 25px;
+
+  border-radius: 4px;
+  border: 1px solid white;
+}
+.nav-profile-dropdown li {
+  list-style: none;
+}
+.nav-profile-dropdown li:hover {
+  color: tomato;
+}
+@media (max-width: 1050px) {
+  .navbar .logo {
+    width: 140px;
+  }
+  .navbar-menu {
+    gap: 20px;
+    font-size: 17px;
+  }
+  .navbar-right {
+    gap: 30px;
+  }
+  .navbar-right img {
+    width: 22px;
+  }
+  .navbar-right button {
+    padding: 8px 25px;
+  }
+}
+@media (max-width: 900px) {
+  .navbar .logo {
+    width: 120px;
+  }
+  .navbar-menu {
+    gap: 15px;
+    font-size: 16px;
+  }
+  .navbar-right {
+    gap: 20px;
+  }
+  .navbar-right img {
+    width: 20px;
+  }
+  .navbar-right button {
+    padding: 7px 20px;
+    font-size: 15px;
+  }
+}
+@media (max-width: 750px) {
+  .navbar-menu {
+    display: none;
+  }
+  .gg-menu-round {
+    display: block;
+  }
+
+  .isVisible {
+    display: flex;
+  }
+}
