@@ -17,8 +17,10 @@ function Verify() {
     const orderId = searchParams.get("orderId");
     const response = await fetch(url + "/api/order/verify", {
       method: "POST",
-      mode: "cors",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "access-control-allow-origin": "*",
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify({
         success,
         orderId,
