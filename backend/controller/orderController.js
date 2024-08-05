@@ -55,6 +55,7 @@ exports.placeOrder = async (req, res) => {
 //To verify order
 exports.verifyOrder = async (req, res) => {
   const { orderId, success } = req.body;
+  console.log(orderId, success);
   try {
     if (success == "true") {
       await orderModel.findByIdAndUpdate(orderId, { payment: true });

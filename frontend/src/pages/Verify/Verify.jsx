@@ -15,17 +15,35 @@ function Verify() {
   const verifyPayment = async () => {
     const success = searchParams.get("success");
     const orderId = searchParams.get("orderId");
-    const response = await axios.post(url + "/api/order/verify", {
-      success,
-      orderId,
-    });
+    const response = await fetch(url + "/api/order/verify", {
+      method: "POST",
+      mode: "cors",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        success,
+        orderId,
+      }),
+    })
+      .then((response) => response.json())
+      .then((responseJson) => {
+        return responseJson;
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+    // .then((res) => console.log(res.json()));
 
-    if (response.data.success) {
+    // const response = await axios.post(url + "/api/order/verify", {
+    //   success,
+    //   orderId,
+    // });
+    // console.log(response);
+    if (response.success) {
       toast.success("Your Order is Placed Successful");
       setNav(true);
       navigate("/myorders");
     }
-    if (response.data.success == false) {
+    if (response.success == false) {
       toast.success("fail");
       setNav(false);
       navigate("/");
