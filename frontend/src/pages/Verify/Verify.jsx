@@ -19,18 +19,22 @@ function Verify() {
       success,
       orderId,
     });
+
     if (response.data.success) {
       toast.success("Your Order is Placed Successful");
       setNav(true);
       navigate("/myorders");
-    } else {
+    }
+    if (response.data.success == false) {
+      toast.success("fail");
       setNav(false);
       navigate("/");
     }
   };
-  useEffect(() => {
-    verifyPayment();
-  }, []);
+  verifyPayment();
+  // useEffect(() => {
+  //   verifyPayment();
+  // }, []);
 
   return (
     <div className="verify">

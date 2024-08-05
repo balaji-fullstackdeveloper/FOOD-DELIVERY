@@ -13,7 +13,6 @@ function MyOrders() {
       { headers: { token } }
     );
     setData(response.data.data);
-    console.log(response.data.data);
   };
   useEffect(() => {
     if (token) {
@@ -24,7 +23,7 @@ function MyOrders() {
   return (
     <div className="my-orders">
       <h2>My Orders</h2>
-      <div className="container">
+      <div className="container3">
         {data.map((order, index) => {
           return (
             <div key={index} className="my-orders-order">
