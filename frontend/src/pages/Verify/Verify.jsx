@@ -31,10 +31,10 @@ function Verify() {
       navigate("/");
     }
   };
-  verifyPayment();
-  // useEffect(() => {
-  //   verifyPayment();
-  // }, []);
+
+  useEffect(() => {
+    verifyPayment();
+  }, []);
 
   return (
     <div className="verify">
