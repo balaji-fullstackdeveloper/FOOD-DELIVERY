@@ -7,9 +7,9 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Login from "./pages/Login/Login";
 import { useState, useEffect } from "react";
+import { url } from "./assests/assets";
 
 function App() {
-  const url = "http://localhost:8000";
   const [token, setToken] = useState("");
   const setLocalStorageWithExpiry = (key, value, ttl) => {
     const now = new Date();
