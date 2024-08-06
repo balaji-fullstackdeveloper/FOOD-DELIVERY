@@ -18,7 +18,7 @@ function Verify() {
     const response = await fetch(url + "/api/order/verify", {
       method: "POST",
       headers: {
-        "access-control-allow-origin": "*",
+       
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
