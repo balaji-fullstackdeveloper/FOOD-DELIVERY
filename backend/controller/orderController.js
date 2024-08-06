@@ -7,7 +7,7 @@ const stripe = require("stripe")(
 
 //placing user order for frontend
 exports.placeOrder = async (req, res) => {
-  const frontend_url = "https://food-delivery-7542.onrender.com";
+  const frontend_url = "https://celadon-praline-c8114a.netlify.app";
   try {
     const newOrder = new orderModel({
       userId: req.body.userId,

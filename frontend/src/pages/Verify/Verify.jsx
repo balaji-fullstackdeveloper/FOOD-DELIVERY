@@ -18,7 +18,6 @@ function Verify() {
     const response = await fetch(url + "/api/order/verify", {
       method: "POST",
       headers: {
-       
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
@@ -59,6 +58,7 @@ function Verify() {
   return (
     <div className="verify">
       <div className="spinner"></div>
+      <div>hello</div>
     </div>
   );
 }
