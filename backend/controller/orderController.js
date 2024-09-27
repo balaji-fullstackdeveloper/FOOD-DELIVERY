@@ -2,7 +2,7 @@ const orderModel = require("../model/orderModel");
 const userModel = require("../model/userModel");
 
 const stripe = require("stripe")(
-  "sk_test_51OeI6HSEK92aMmhJhUpS2my7A7d7U3OJSSNxxgYgHTQp6iWpaulPJU18q6IKv74A7pvodQUO4rJ3eQPLB4yAkB6D00IlIGHKCt"
+  "sk_test_51Q3ZwWHbdZZV8Sw2kxmXt4EZfW5yGbGYvS8FDunYCNluIFzxhpBvMJnumRKKVT59Q3tjXEugOb7iHtUQMLToxWRI003sgMBlEq"
 );
 
 //placing user order for frontend
