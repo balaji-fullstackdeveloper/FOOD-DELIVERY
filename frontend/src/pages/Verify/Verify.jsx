@@ -32,20 +32,14 @@ function Verify() {
       .catch((error) => {
         console.error(error);
       });
-    // .then((res) => console.log(res.json()));
 
-    // const response = await axios.post(url + "/api/order/verify", {
-    //   success,
-    //   orderId,
-    // });
-    // console.log(response);
     if (response.success) {
       toast.success("Your Order is Placed Successful");
       setNav(true);
       navigate("/myorders");
     }
     if (response.success == false) {
-      toast.success("fail");
+      toast.error("Your Order is not Placed");
       setNav(false);
       navigate("/");
     }
