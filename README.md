@@ -2,9 +2,18 @@
 
 an Food-Delivery Website built with MERN stack.
 
-## Front End Deploy URL
+## Front End Deploy Client URL
 
-https://celadon-praline-c8114a.netlify.app
+https://cerulean-squirrel-ea5cb5.netlify.app/
+
+## Front End Deploy Admin URL
+
+https://food-delivery-admin-e7t0.onrender.com
+
+
+## Backend End Deploy URL
+
+https://food-delivery-backend-server-y65q.onrender.com
 
 
 ##Instruction
